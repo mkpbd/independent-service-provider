@@ -2,3 +2,7 @@
     font-weight: 700;
     font-size: 30px;
 }
+
+.card-hover:hover{
+    background-color: rgba(118, 24, 24, 0.6) !important;
+}
