@@ -4,42 +4,48 @@
        "serviceName":"Audience",
        "serviceIcon":"images/figuer/figure31.png",
        "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44
+       "price":44,
+       "serviceImage":"images/slider2.png"
     },
     {
        "id":2,
        "serviceName":"Tax Advisory",
        "serviceIcon":"images/figuer/figure30.png",
        "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44
+       "price":44,
+       "serviceImage":"images/slider1.png"
     },
     {
        "id":3,
        "serviceName":"Investment",
        "serviceIcon":"images/figuer/figure47.png",
        "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44
+       "price":44,
+       "serviceImage":"images/slider2.png"
     },
     {
        "id":4,
        "serviceName":"Saving Money",
        "serviceIcon":"images/figuer/figure59.png",
        "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44
+       "price":44,
+       "serviceImage":"images/slider1.png"
     },
     {
        "id":5,
        "serviceName":"HR Consulting",
        "serviceIcon":"images/figuer/figure46.png",
        "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44
+       "price":44,
+       "serviceImage":"images/slider2.png"
     },
     {
        "id":6,
        "serviceName":"Audit",
        "serviceIcon":"images/figuer/figure43.png",
        "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44
+       "price":44,
+       "serviceImage":"images/slider1.png"
     }
 
 
