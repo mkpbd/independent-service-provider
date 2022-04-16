@@ -78,3 +78,10 @@ Optional:
 
 
 	https://themeforest.net/item/finbuzz-business-html-template/31294351
+
+
+
+
+	font include all ready  use font  family
+
+	font-family: 'Barlow', sans-serif;
