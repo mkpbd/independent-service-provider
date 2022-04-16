@@ -10,16 +10,19 @@ const SingleService = () => {
        <>
         {services.map(service => (
              <Col key={service.id}>
-             <Card className='border-0 text-center d-block p-3 bg-dark text-white card-hover'>
+             <Card className='border-0 text-center h-100 d-block p-3 bg-dark text-white card-hover'>
                <Card.Title className='title-font-weight my-3'>{service.serviceName}</Card.Title>
                <Card.Img className='img-fluid h-25 w-25' src={service.serviceIcon} />
                <Card.Body>
                  <Card.Text>
                   {service.serviceSummary}
                  </Card.Text>
-                 <Button type="href">Service Charge: {service.price}$</Button>
+                 <Card.Link className='link text-decoration-none text-white'>Service Charge: {service.price}$</Card.Link>
                  
                </Card.Body>
+               <Card.Footer>
+                  <Button className='btn btn-danger'>Add To Service</Button>
+               </Card.Footer>
              </Card>
            </Col>
         ))}
