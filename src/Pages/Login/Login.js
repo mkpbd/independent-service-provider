@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle,useSignInWithGithub } from "react-firebase-hooks/auth";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import auth from '../../firebase.init';
 const Login = () => {
@@ -10,6 +10,9 @@ const Login = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+
+  const [signInWithGithub, userGit, loadingGit, errorGit] = useSignInWithGithub(auth);
+  const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
@@ -17,9 +20,15 @@ const Login = () => {
      return;
   }
 
-  if(user){
+  if(user || userGit || userGoogle){
     navigate(from, { replace: true });
   }
+const handleSigneGoole = () =>{
+  signInWithGoogle()
+}
+
+
+
   const handleLogin = (event) =>{
     event.preventDefault();
 
@@ -60,11 +69,11 @@ const Login = () => {
 
           <div className="text-center">
             <h2>---------------- OR --------------------</h2>
-            <Button className="my-2 btn btn-lg btn-secondary">
+            <Button onClick={handleSigneGoole} className="my-2 btn btn-lg btn-secondary">
               Google Account
             </Button>{" "}
             <br></br>
-            <Button className="my-2 btn btn-lg btn-secondary">
+            <Button onClick={() =>signInWithGithub()} className="my-2 btn btn-lg btn-secondary">
               GitHub Account
             </Button>
            

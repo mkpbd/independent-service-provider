@@ -14,15 +14,15 @@ Task Detail:
 
 	7 Clicking on the button will take the user to the Checkout route. This route will be private/protected routes. Please make sure that the private route redirects to the login page if the user is not logged in. After login, the user will be redirected to the checkout page
 
-	8 You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description.
+	8 You can put anything on the checkout page. If you want to do some extra optional work, please read the optional but highly recommended section of this description. (Done)
 
 	9 If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.
 
-	10 You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react router hook to implement the login system. And don't forget to make the Email and password field a required field.
+	10 You Must implement Email-password based authentication. You will have to implement the Registration and the login page. Users should be able to toggle between Login and Registration view. You can use react router hook to implement the login system. And don't forget to make the Email and password field a required field. (Done)
 
-	11 Also, implement at least one extra login, which could be (facebook, github, google, etc).
+	11 Also, implement at least one extra login, which could be (facebook, github, google, etc). (Done)
 
-	12  Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked.
+	12  Once logged in, the log out/sign out button should appear on the header, which will log out the user once clicked. (Done)
 
 
 	13 Add two more routes. one route will be blogs. On the blog page, you will need to answer these three questions. This won't be a protected route
@@ -56,16 +56,16 @@ Bonus:
 Optional But Highly Recommended:
 	1 Your checkout page will be a dynamic route with route parameter having the id of the service user created. In the checkout page, you will have a simple form that you will have fields for user name, user email address, address, and phone number. Once the user submits the form, you will display the user, thank you for the booking.
 
-	2 Use the Environment variable to hide the firebase key
+	2 Use the Environment variable to hide the firebase key (Done)
 
-	3 Add active routes to see which route you are.
+	3 Add active routes to see which route you are. (Done)
 
-	4 If possible, make the entire website responsive. Once you are done making the home page responsive, you wont need much things to do to make the entire website responsive.
+	4 If possible, make the entire website responsive. Once you are done making the home page responsive, you wont need much things to do to make the entire website responsive. (Done)
 
 Optional:
 	1 For the Checkout page, you can use basic html form or any css library. However, we encourage you to try out the react hook form.
 
-	2 Add some mouseover animation while taking the mouse on the services card
+	2 Add some mouseover animation while taking the mouse on the services card (done)
 
 	3 If you want to take a challenge. consider using react-leaflet anywhere in your application
 
