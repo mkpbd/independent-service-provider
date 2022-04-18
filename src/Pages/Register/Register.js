@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Form } from "react-bootstrap";
+import { Button, Card, Col, Form } from "react-bootstrap";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./Register.css";
 import { ToastContainer, toast } from 'react-toastify';
@@ -57,10 +57,12 @@ const Register = () => {
   }
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="containers rgBg-color">
+      <div className="row gx-0 py-5">
         <Col className="col-sm-8 col-lg-6 offset-lg-3 offset-sm-2">
-          <Form onSubmit={handleSignIn}>
+         <Card>
+            <Card.Body>
+            <Form onSubmit={handleSignIn}>
             <Form.Group className="mb-3" controlId="nameId">
               <Form.Label>Name</Form.Label>
               <Form.Control type="text" name="fullNames" placeholder="Enter Your Name" />
@@ -81,7 +83,9 @@ const Register = () => {
             </Button>
             <ToastContainer></ToastContainer>
           </Form>
-          <h5 className="my-4 text-center text-secondary"><Link to='/login' className="text-decoration-none">Already account for login</Link></h5>
+          <h6 className="my-4 text-center text-secondary"><Link to='/login' className="text-decoration-none">Already account for login</Link></h6>
+            </Card.Body>
+         </Card>
         </Col>
       </div>
     </div>

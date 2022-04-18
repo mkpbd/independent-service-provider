@@ -1,3 +1,7 @@
 .pointer{
     cursor: pointer;
 }
+
+.rgBg-color{
+    background: linear-gradient(90deg, rgba(26,128,177,1) 0%, rgba(26,26,180,1) 50%, rgba(0,212,255,1) 100%);
+}

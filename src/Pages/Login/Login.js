@@ -11,6 +11,7 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import './Login.css'
 const Login = () => {
   const emailRef = useRef("");
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -64,10 +65,11 @@ const Login = () => {
   };
 
   return (
-    <div className="container py-5">
+   <div className="login-bg pt-2 py-3">
+      <div className="container">
       <div className="row">
         <Col className="sm-8 col-lg-6 offset-lg-3 offset-sm-2">
-          <Card className="">
+          <Card className="border">
             <Card.Body>
               <ToastContainer></ToastContainer>
               <Form onSubmit={handleLogin}>
@@ -106,33 +108,35 @@ const Login = () => {
                </span>
              </p>
              <p>
-               You have no account <Link to='/signup'>Sing Up</Link>
+               You have no account <Link to='/signup' className="ms-2 text-decoration-none">Sing Up</Link>
              </p>
               </div>
 
-            </Card.Body>
-          </Card>
+          
           {/* Social Media  Login  */}
 
           <div className="text-center">
-            <h2>---------------- OR --------------------</h2>
+            <h6>---------------- OR --------------------</h6>
             <Button
               onClick={handleSigneGoole}
-              className="my-2 btn btn-lg btn-secondary"
+              className="my-2 btn btn-sm btn-secondary"
             >
               Google Account
             </Button>{" "}
             <br></br>
             <Button
               onClick={() => signInWithGithub()}
-              className="my-2 btn btn-lg btn-secondary"
+              className="my-2 btn btn-sm btn-secondary"
             >
               GitHub Account
             </Button>
           </div>
+          </Card.Body>
+          </Card>
         </Col>
       </div>
     </div>
+   </div>
   );
 };
 
