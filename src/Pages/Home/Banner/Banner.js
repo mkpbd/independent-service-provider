@@ -23,7 +23,9 @@ const Banner = () => {
                  <Container className="my-5">
                 <Carousel.Caption className='py-2'>
                   <h2>{service.serviceName}</h2>
-                  <p>{service.serviceSummary}</p>
+                  {
+                     service.serviceSummary.length > 30 ? <p>{service.serviceSummary.slice(0, 40)}...</p> :<p>{service.serviceSummary}</p>
+                  }
                   <h3 className="text-warning">Service price {service.price}$</h3>
                  <Link to='/checkout'> <Button className="btn btn-danger">Checkout Service</Button></Link>
                  
