@@ -13,6 +13,7 @@ import Blog from "./Pages/Blog/Blog";
 import Checkout from "./Pages/Cheakout/Checkout";
 import NoteFound from "./Pages/NotFound/NoteFound";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
+import FooterBoot from "./components/Shared/Footer/FooterBoot";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
         ></Route>
         <Route path="*" element={<NoteFound></NoteFound>}></Route>
       </Routes>
+
+      <FooterBoot></FooterBoot>
     </div>
   );
 }

@@ -3,48 +3,48 @@
        "id":1,
        "serviceName":"Audience",
        "serviceIcon":"images/figuer/figure31.png",
-       "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44,
+       "serviceSummary":" A formal meeting that you have with an important person: She had a private audience with the king. SMART Vocabulary: related words.",
+       "price":150,
        "serviceImage":"images/slider2.png"
     },
     {
        "id":2,
        "serviceName":"Tax Advisory",
        "serviceIcon":"images/figuer/figure30.png",
-       "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44,
+       "serviceSummary":"A tax advisor is a financial professional who provides advice on strategies to minimize taxes owed while staying within the scope of the law and regulation.",
+       "price":200,
        "serviceImage":"images/slider1.png"
     },
     {
        "id":3,
        "serviceName":"Investment",
        "serviceIcon":"images/figuer/figure47.png",
-       "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44,
+       "serviceSummary":"An investment is an asset or item acquired with the goal of generating income or appreciation. Appreciation refers to an increase in the value of an asset over time.",
+       "price":500,
        "serviceImage":"images/slider2.png"
     },
     {
        "id":4,
        "serviceName":"Saving Money",
        "serviceIcon":"images/figuer/figure59.png",
-       "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44,
+       "serviceSummary":"simple ways to save money · Record your expenses · Include saving in your budget · Find ways to cut spending · Set savings goals · Determine your financial",
+       "price":140,
        "serviceImage":"images/slider1.png"
     },
     {
        "id":5,
        "serviceName":"HR Consulting",
        "serviceIcon":"images/figuer/figure46.png",
-       "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44,
+       "serviceSummary":"HR consulting involves a variety of services, including recruitment services, training and development of new employees and ongoing training services.",
+       "price":350,
        "serviceImage":"images/slider2.png"
     },
     {
        "id":6,
        "serviceName":"Audit",
        "serviceIcon":"images/figuer/figure43.png",
-       "serviceSummary":"when unknown printer tookar galleytype ande scrambled imake type.",
-       "price":44,
+       "serviceSummary":"Definition: Audit is the examination or inspection of various books of accounts by an auditor followed by physical checking of inventory to make sure that",
+       "price":300,
        "serviceImage":"images/slider1.png"
     }
 

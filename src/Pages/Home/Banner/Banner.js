@@ -1,6 +1,7 @@
 
 import React, { useContext } from "react";
 import { Button, Carousel, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { ServiceContext } from "../../../components/Service/Service";
 import useService from "../../../hooks/useService";
 import './Banner.css'
@@ -24,7 +25,7 @@ const Banner = () => {
                   <h2>{service.serviceName}</h2>
                   <p>{service.serviceSummary}</p>
                   <h3 className="text-warning">Service price {service.price}$</h3>
-                  <Button className="btn btn-danger">Add Service</Button>
+                 <Link to='/checkout'> <Button className="btn btn-danger">Checkout Service</Button></Link>
                  
                 </Carousel.Caption>
                 </Container>
