@@ -43,6 +43,7 @@ const Login = () => {
     const password = event.target.password.value;
     if(email && password){
       signInWithEmailAndPassword(email, password);
+      toast("Login success full");
       return;
     }
     toast("place give valid email and password");
@@ -66,7 +67,7 @@ const Login = () => {
     <div className="container py-5">
       <div className="row">
         <Col className="sm-8 col-lg-6 offset-lg-3 offset-sm-2">
-          <Card className="text-center">
+          <Card className="">
             <Card.Body>
               <ToastContainer></ToastContainer>
               <Form onSubmit={handleLogin}>
@@ -96,13 +97,19 @@ const Login = () => {
                 </Button>
               </Form>
 
-              <h5>
-                {" "}
-                Forget Password{" "}
-                <a href="#" onClick={handleResetPassword}>
-                  Reset password
-                </a>{" "}
-              </h5>
+              <div className="py-3">
+              <p>
+               
+               Forget Password
+               <span className="ms-2 text-primary pointer"  onClick={handleResetPassword}>
+                 Reset password
+               </span>
+             </p>
+             <p>
+               You have no account <Link to='/signup'>Sing Up</Link>
+             </p>
+              </div>
+
             </Card.Body>
           </Card>
           {/* Social Media  Login  */}

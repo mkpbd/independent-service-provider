@@ -1,0 +1,16 @@
+[
+    {"id":1,
+     "name": "Mostofa Kamal",
+     "image": "images/",
+     "myObjective": "",
+     "myGoal":"My goal is to be a passionate inspiring and creative developer that will be able to invent and innovate; also share and teach others in a way that they can be excited like I am about Web developer and I wan to learn ",
+     "Skill":[
+         "Developing good communication skills",
+         "Improving performance metrics",
+         "Asking for feedback",
+         "Working effectively in a team",
+         "Web developer"
+
+     ]
+    }
+]

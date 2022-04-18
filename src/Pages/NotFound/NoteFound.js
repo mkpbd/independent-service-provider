@@ -2,8 +2,8 @@ import React from 'react';
 
 const NoteFound = () => {
     return (
-        <div>
-            <h2>Nothing found</h2>
+        <div className='container d-flex w-100 h-100 justify-content-center align-items-center'>
+            <img className='d-block my-5 img-fluid' src="images/404.png" alt="" />
         </div>
     );
 };

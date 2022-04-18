@@ -15,7 +15,7 @@ const Header = () => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="white">
+    <Navbar collapseOnSelect expand="lg" >
       <Container>
         <Navbar.Brand>
             <ActiveRoute to='/'><img src="images/logo2.png" height='30px' alt="" /></ActiveRoute>
