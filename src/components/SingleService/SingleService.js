@@ -1,6 +1,7 @@
 
 import React, { useContext } from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { ServiceContext } from '../Service/Service';
 import './SingelService.css'
 
@@ -21,7 +22,7 @@ const SingleService = () => {
                  
                </Card.Body>
                <Card.Footer>
-                  <Button className='btn btn-danger'>Add To Service</Button>
+                  <Link to='/checkout'>  <Button className='btn btn-danger' >Checkout Service</Button></Link>
                </Card.Footer>
              </Card>
            </Col>

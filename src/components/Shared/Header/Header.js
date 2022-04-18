@@ -15,7 +15,7 @@ const Header = () => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" >
+    <Navbar collapseOnSelect expand="lg" className="mb-4" >
       <Container>
         <Navbar.Brand>
             <ActiveRoute to='/'><img src="images/logo2.png" height='30px' alt="" /></ActiveRoute>
@@ -28,6 +28,7 @@ const Header = () => {
             <ActiveRoute className="nav-link"  to="/blog">Blog</ActiveRoute>
             <ActiveRoute className="nav-link"  to="/checkout">Checkout</ActiveRoute>
             <ActiveRoute className="nav-link"  to="/contact">Contact</ActiveRoute>
+            <ActiveRoute className="nav-link"  to="/about">About</ActiveRoute>
            
           </Nav>
           <Nav>
