@@ -94,7 +94,7 @@ const Register = () => {
                   <Form.Control
                     name="confirmPassword"
                     type="password"
-                    placeholder="Password"
+                    placeholder="Confirm Password"
                   />
                 </Form.Group>
 
