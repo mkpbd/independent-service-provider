@@ -11,7 +11,7 @@ const Banner = () => {
    
   return (
    
-      <Carousel className="py-5">
+      <Carousel className="py-2">
         {
             services.map(service =>(
                 <Carousel.Item interval={2000} key={service.id} className="img-opacity">
