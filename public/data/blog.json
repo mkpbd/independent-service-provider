@@ -2,19 +2,55 @@
     {
        "id":1,
        "questionName":"Difference between authorization and authentication",
-       "Answer":"fgsfgsfgsdfgsgfsfg"
+       "Answer":
+            {
+              "def": "Simply put authentication is the process of verifying who some is whereas authorization is the process of verifying what specific applications files and data a usr has access to the situation is like that  of an airline thant needs to determine which people can come on board",
+              "authentication":[
+                 "Authentication verifies who the user is",
+                 "Authentication works through passwords one time pins biometric information and other information provided or entered by the user",
+                 "Authentication is visible to and partially changeable by the user",
+                 "Example verifying their identity emplyess can gain access to an HR application that includes their personal pay information vactation times "
+              ], 
+              "Authorization":[
+                 "Authorization determines what resources a user can access ",
+                 "Authorization works through settings that are implemented and maintained by the organization",
+                 "Authorization always takes place after authentication",
+                 "Authorization is not visible to or changeable by the user.",
+                 "Example Once their level of access is authorized employees and HR manager can access different levels of data based on the permissions set by the organization "
+
+
+              ]
+            }
+       
        
     },
     {
        "id":2,
-       "questionName":"Audience",
-       "Answer":"fgsfgsfgsdfgsgfsfg"
+       "questionName":" Why are you using firebase? What other options do you have to implement authentication?",
+       "Answer":{
+          "def":"Firebase, backend as a Service (BaaS) is a platform by Google that provides functionalities and helps with the backend development fo our Android, iOs, or web and even some product that support Unity#D too",
+          "authentication":[],
+          "Authorization":[],
+          "database":"",
+          "messaging":"",
+          "config": "Firebase Remote used to perform A/B testing on the go Firebase has great features",
+          "others": "Firebase alter native Back4App, Parse AWS Amplify, Kuzzle, Supabase, appwrite, Hasura, NHost, Deployd ETC "
+       }
        
     },
     {
        "id":3,
-       "questionName":"Audience",
-       "Answer":"fgsfgsfgsdfgsgfsfg"
+       "questionName":"What other services does firebase provide other than authentication",
+       "Answer":{
+         "def":"",
+         "authentication":[],
+         "Authorization":[],
+         "database":"Firebase database used to store user data like chat message user details and other metadata",
+         "cloud": "Firebase Cloud Storage use ot store user generated content like the profile picture multimedia messages etc.",
+         "messaging":"Firebase Cloud Messaging used to send notification ",
+         "config": "Firebase Remote used to perform A/B testing on the go Firebase has great features",
+         "others": ""
+      }
        
     }
 

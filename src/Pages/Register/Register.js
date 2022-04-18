@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Button, Col, Form } from "react-bootstrap";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./Register.css";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
-import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 
@@ -13,8 +15,10 @@ const Register = () => {
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
+  // const [sendEmailVerification, sending, error1] = useSendEmailVerification(auth);
 
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const navigate = useNavigate();
 
   const [fullName, setFullName] = useState('');
@@ -40,8 +44,9 @@ const Register = () => {
 
       if(name && email && password){
         createUserWithEmailAndPassword(email, password);
+        updateProfile({displayName: name})
       }else{
-        alert("place all file are required");
+        toast("place all file are required");
       }
 
      
@@ -71,10 +76,11 @@ const Register = () => {
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Submit
+              Sing Up
             </Button>
+            <ToastContainer></ToastContainer>
           </Form>
-          <h3 className="my-4 text-center text-secondary"><Link to='/login' className="text-decoration-none">Already account for login</Link></h3>
+          <h5 className="my-4 text-center text-secondary"><Link to='/login' className="text-decoration-none">Already account for login</Link></h5>
         </Col>
       </div>
     </div>
