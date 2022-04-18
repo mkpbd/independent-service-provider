@@ -37,6 +37,12 @@ const Login = () => {
     signInWithGoogle();
   };
 
+  if(error){
+     //console.log('error', error.message);
+    toast("user name or password dose not match");
+
+  }
+
   const handleLogin = (event) => {
     event.preventDefault();
 
