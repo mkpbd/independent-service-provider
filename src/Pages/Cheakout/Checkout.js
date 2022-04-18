@@ -3,9 +3,18 @@ import { Button, Card, Col, Form, Row, Table } from "react-bootstrap";
 import "./Checkout.css";
 
 const Checkout = () => {
+
+  const handleSubmitForm = event =>{
+    event.preventDefault();
+
+    alert("Your information save ");
+    alert("we are working now");
+
+  }
+
   return (
     <div className="container my-5 py-3">
-      <Form className="">
+      <Form className="" onSubmit={handleSubmitForm}>
         <div className="row border p-3">
           <Col sm="7">
             <h2 className=" py-3 d-block">Checkout</h2>

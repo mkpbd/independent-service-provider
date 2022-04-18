@@ -1,5 +1,9 @@
 import React, { useRef } from "react";
 import { Button, Card, Col, Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaGoogle } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -11,7 +15,9 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import './Login.css'
+import "./Login.css";
+
+//===== Login page and validation user login ===========
 const Login = () => {
   const emailRef = useRef("");
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -37,10 +43,9 @@ const Login = () => {
     signInWithGoogle();
   };
 
-  if(error){
-     //console.log('error', error.message);
+  if (error) {
+    //console.log('error', error.message);
     toast("user name or password dose not match");
-
   }
 
   const handleLogin = (event) => {
@@ -48,15 +53,12 @@ const Login = () => {
 
     const email = event.target.email.value;
     const password = event.target.password.value;
-    if(email && password){
+    if (email && password) {
       signInWithEmailAndPassword(email, password);
       toast("Login success full");
       return;
     }
     toast("place give valid email and password");
-
-
-    
   };
 
   const handleResetPassword = (event) => {
@@ -71,78 +73,84 @@ const Login = () => {
   };
 
   return (
-   <div className="login-bg pt-2 py-3">
+    <div className="login-bg pt-2 py-3">
       <div className="container">
-      <div className="row">
-        <Col className="sm-8 col-lg-6 offset-lg-3 offset-sm-2">
-          <Card className="border">
-            <Card.Body>
-              <ToastContainer></ToastContainer>
-              <Form onSubmit={handleLogin}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    name="email"
-                    type="email"
-                    ref={emailRef}
-                    placeholder="Enter email"
-                  />
-                </Form.Group>
+        <div className="row">
+          <Col className="sm-8 col-lg-6 offset-lg-3 offset-sm-2">
+            <Card className="border">
+              <Card.Body>
+                <ToastContainer></ToastContainer>
+                <Form onSubmit={handleLogin}>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                      name="email"
+                      type="email"
+                      ref={emailRef}
+                      placeholder="Enter email"
+                    />
+                  </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Login
-                </Button>
-              </Form>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                      name="password"
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                  </Form.Group>
+                  <Button variant="primary" type="submit">
+                    Login
+                  </Button>
+                </Form>
 
-              <div className="py-3">
-              <p>
-               
-               Forget Password
-               <span className="ms-2 text-primary pointer"  onClick={handleResetPassword}>
-                 Reset password
-               </span>
-             </p>
-             <p>
-               You have no account <Link to='/signup' className="ms-2 text-decoration-none">Sing Up</Link>
-             </p>
-              </div>
+                <div className="py-3">
+                  <p>
+                    Forget Password
+                    <span
+                      className="ms-2 text-primary pointer"
+                      onClick={handleResetPassword}
+                    >
+                      Reset password
+                    </span>
+                  </p>
+                  <p>
+                    You have no account{" "}
+                    <Link to="/signup" className="ms-2 text-decoration-none">
+                      Sing Up
+                    </Link>
+                  </p>
+                </div>
 
-          
-          {/* Social Media  Login  */}
+                {/* Social Media  Login  */}
 
-          <div className="text-center">
-            <h6>---------------- OR --------------------</h6>
-            <Button
-              onClick={handleSigneGoole}
-              className="my-2 btn btn-sm btn-secondary"
-            >
-              Google Account
-            </Button>{" "}
-            <br></br>
-            <Button
-              onClick={() => signInWithGithub()}
-              className="my-2 btn btn-sm btn-secondary"
-            >
-              GitHub Account
-            </Button>
-          </div>
-          </Card.Body>
-          </Card>
-        </Col>
+                <div className="text-center">
+                  <h6>---------------- OR --------------------</h6>
+                  <Button
+                    onClick={handleSigneGoole}
+                    className="my-2 btn btn-sm btn-danger"
+                  >
+                    <FaGoogle className="icon-size me-2 text-white"></FaGoogle>
+                    Google Account
+                  </Button>{" "}
+                  <br></br>
+                  <Button
+                    onClick={() => signInWithGithub()}
+                    className="my-2 btn btn-sm btn-secondary"
+                  >
+                    <FaGithubSquare className="me-2 icon-size"></FaGithubSquare>
+                    GitHub Account
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </div>
       </div>
     </div>
-   </div>
   );
 };
 

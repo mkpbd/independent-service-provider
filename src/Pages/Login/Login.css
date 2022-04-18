@@ -3,3 +3,7 @@
     background: rgb(151,159,219);
     background: linear-gradient(90deg, rgba(151,159,219,1) 0%, rgba(38,38,38,1) 50%, rgba(72,72,73,1) 100%);
 }
+
+.icon-size{
+    font-size: 30px;
+}

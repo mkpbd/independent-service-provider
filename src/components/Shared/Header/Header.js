@@ -27,8 +27,8 @@ const Header = () => {
             <ActiveRoute className="nav-link"  to="/service">Service</ActiveRoute>
             <ActiveRoute className="nav-link"  to="/blog">Blog</ActiveRoute>
             <ActiveRoute className="nav-link"  to="/checkout">Checkout</ActiveRoute>
-            <ActiveRoute className="nav-link"  to="/contact">Contact</ActiveRoute>
-            <ActiveRoute className="nav-link"  to="/about">About</ActiveRoute>
+            {/* <ActiveRoute className="nav-link"  to="/contact">Contact</ActiveRoute> */}
+            <ActiveRoute className="nav-link"  to="/about">About me</ActiveRoute>
            
           </Nav>
           <Nav>
